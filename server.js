@@ -1,6 +1,8 @@
 const express = require('express');
 const hbs = require('hbs');
 
+const port = process.env.PORT || 3000;
+
 var app = express();
 
 hbs.registerPartials(__dirname + '/views/partials')
@@ -57,6 +59,6 @@ app.get('/helloJson', (req, res) => {
 
 })
 
-app.listen(8080, () => {
-    console.log('App is listen on 192.168.0.67:8080');
+app.listen(port, () => {
+    console.log(`App is listen on ${port}`);
 });
