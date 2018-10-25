@@ -57,7 +57,13 @@ app.get('/helloJson', (req, res) => {
         ]
     });
 
-})
+});
+
+app.get('/projects', (req, res) => {
+    res.render('projects.hbs', {
+        pageTitle: 'Projects'
+    });
+});
 
 app.listen(port, () => {
     console.log(`App is listen on ${port}`);
