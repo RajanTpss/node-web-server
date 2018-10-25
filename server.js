@@ -22,6 +22,10 @@ hbs.registerHelper('screamIt', (Text) => {
  * @req represents request
  */
 app.get('/', (req, res) => {
+    res.render('index.hbs');
+});
+
+app.get('/home', (req, res) => {
 
     res.render('home.hbs', {
         pageTitle: 'Home Page',
